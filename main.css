@@ -1,0 +1,815 @@
+@font-face {
+    font-family: Blinker;
+    src: url('./Blinker-Light.ttf');
+}
+
+body {
+    background-color: #252525;
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    font-family: 'Blinker', sans-serif;
+}
+
+header {
+    margin: auto;
+    width: 260px;
+}
+
+a {
+    color: white;
+}
+
+.about {
+    width: 80%;
+    margin: auto;
+}
+.about h2 {
+    margin: auto;
+    padding: 0;
+    width: auto;
+    text-align: center;
+}
+
+.about p {
+    text-align: left;
+}
+button {
+    border: none;
+    border-radius: 15px;
+    margin-top: 15px;
+    width: 10%;
+    font-size: 20px;
+    background-color: #606060;
+    color: white;
+}
+
+button:hover {
+    background-color: #343434;
+}
+
+input {
+    border: none;
+    border-radius: 5px;
+    width: 50%;
+    font-size: 20px;
+    text-align: center;
+    text-overflow: ellipsis;
+    background-color: grey;
+    color: white;
+}
+
+table {
+    margin: auto;
+    width: 100%;
+}
+
+#records {
+    background-color: #343434;
+    border-radius: 25px;
+    padding: 20px;
+    margin-top: 0%;
+}
+
+.container {
+    margin-top: 4%;
+    width: 100%;
+}
+
+.banner {
+    margin: auto;
+    margin-top: 15%;
+    padding: 0;
+    padding-bottom: 30px;
+    font-size: 50px;
+    width: 300px;
+    text-align: center;
+}
+
+h2 {
+    color: white;
+    text-align: left;
+    padding-left: 5%;
+    margin-top: 30px;
+    width: 250px;
+    font-size: 40px;
+}
+
+.loading p {
+    margin-top: 2%;
+}
+
+hr {
+    max-width: 95%;
+    height: 5px;
+    background-color: #361aa3;
+    background: linear-gradient(90deg, #FC466B 0%, #3F5EFB 100%);
+    border: none;
+    margin-bottom: 0;
+}
+
+.menu {
+    max-width: 95%;
+    height: 40px;
+    margin: auto;
+}
+
+.menuItem {
+    margin: 0;
+    height: 40px;
+    width: 50%;
+    border-radius: 0;
+    background-color: #9a9a9a;
+}
+
+.menuItem:hover {
+    background-color: gray;
+}
+
+.active {
+    background-color: white;
+    color: black;
+}
+
+.active:hover {
+    background-color: white;
+}
+
+.addressBox {
+    border: 1px grey solid;
+    width: calc(100% - 30px);
+    padding: 10px;
+    box-shadow: 1px 5px 12px 2px rgba(0,0,0,0.86);
+    border-radius: 5px;
+    background-color: #505050;
+}
+
+.addressBox p {
+    margin: 0;
+    font-size: 20px;
+}
+
+.address {
+    background-color: grey;
+    color: white;
+    border-radius: 5px;
+/*    width: calc(100% - 5px);*/
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    overflow: hidden;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.copy {
+    height: 20px;
+    width: 20px;
+    margin-top: 1px;
+    margin-left: 5px;
+    content: url('images/copy.png');
+    vertical-align: middle;
+}
+
+.opensea {
+    content: url('images/opensea-logo.png');
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns:  repeat(auto-fill, minmax(350px, 1fr));
+    justify-content: center;
+    grid-gap: 15px;
+    max-width: 95%;
+    margin: auto;
+    margin-top: 15px;
+}
+
+.logo {
+    max-width: 50px;
+    max-height: 50px;
+    margin: auto;
+    padding-bottom: 10px;
+}
+
+.home {
+    max-height: 40px;
+    max-width: 40px;
+    content: url('images/home.png');
+}
+
+p {
+    color: white;
+}
+
+.ownerSection {
+    display: flex;
+    justify-content: space-between;
+    width: 94%;
+    margin: auto;
+}
+
+.ownerSection p {
+    text-align: left;
+}
+
+.ownerSection img {
+    max-width: 50px;
+    max-height: 50px;
+    margin: 5px;
+    display: inline;
+    vertical-align: middle;
+}
+
+footer {
+    position: static;
+    bottom: 0;
+    margin: auto;
+    padding-bottom: 10px;
+}
+
+.ipfs {
+    content: url('images/ipfs-logo.png');
+}
+
+.email {
+    content: url('images/email.png');
+}
+
+.redirect {
+    content: url('images/redirect.png');
+}
+
+.missing {
+    content: url('images/missing.png');
+}
+
+.opensea-logo-full {
+    content: url('images/opensea-logo-full.png');
+    padding: 5px;
+    background-color: #1785e5;
+    width: 160px;
+    border-radius: 5px;
+    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.25);
+    position:absolute;
+    bottom: 15%;
+    right: 11%;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 60px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  top: 150%;
+  left: 50%;
+  margin-left: -35px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent #555 transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+.domain {
+    margin: auto;
+    padding-left: 0;
+    font-size: 30px;
+    width: 100%;
+    text-align: center;
+    background: none;
+    text-overflow: ellipsis;
+    
+}
+
+.homeButton {
+    text-decoration: none;
+}
+
+.homeButton img {
+    float: left;
+    margin-right: 5px;
+    margin-top: 4px;
+}
+
+.nftBox {
+    height: 450px;
+    width: calc(100% - 30px);
+    box-shadow: 1px 5px 12px 2px rgba(0,0,0,0.86);
+    border-radius: 5px;
+    margin: 15px;
+    background-color: #505050;
+}
+
+.nft {
+    max-width: calc(100% - 10px);
+    height: 200px;
+    overflow: hidden;
+}
+
+.nftInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: calc(99% - 200px);
+    border-top: solid grey 1px;
+}
+
+.nftDescription {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.nftDescription p {
+    text-align: left;
+    overflow: hidden;
+    display: block;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    max-height: 6.3em;
+    line-height: 0.9em;
+}
+
+.creatorInfo {
+    border-top: solid grey 1px;
+    text-align: center;
+}
+
+.creatorInfo p {
+    margin: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.creatorImg {
+    max-height: 15px;
+    max-width: 15px;
+    border-radius: 25px;
+    margin-right: 5px;
+}
+
+.creatorLink {
+    text-decoration: none;
+}
+
+.ownerSectionToggle {
+    display: none;
+    content: url('images/expand.png');
+}
+
+.flip {
+    transform: scaleY(-1);
+}
+
+.lds-dual-ring {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+}
+
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: auto;
+  border-radius: 50%;
+  border: 6px solid #fff;
+  border-color: #fff transparent #fff transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+
+textarea {
+	border: none;
+    resize: none;
+    background: none;
+    color: black;
+}
+
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 3%; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #343434;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 95%;
+  height: 90%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+  border-radius: 10px;
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0} 
+  to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  padding: 2px 16px;
+  color: white;
+}
+
+.modal-body {
+    height: inherit;
+    width: calc(100%-16px);
+    margin-top: 25px;
+    margin-bottom: 25px;
+    display: grid;
+    grid-template-columns: auto 30%;
+    padding: 2px 16px;
+    text-align: left;
+}
+
+.modal-footer {
+  padding: 2px 16px;
+  background-color: #5cb85c;
+  color: white;
+}
+
+.modal-body img {
+    height: inherit;
+    max-width: 100%;
+    margin: auto;
+}
+
+.modal-body .creatorLink img {
+    width: 15px;
+    height: 15px;
+    margin-left: 5px;
+    margin-right: 2px;
+}
+
+.modal-body h2 {
+    padding: 0;
+    width: auto;
+    margin-bottom: -12;
+}
+
+.modal-info {
+    border-left: solid 2px gray;
+    padding-left: 10px;
+}
+
+.modal-description {
+    margin-top: 10%;   
+}
+
+@media (prefers-color-scheme: light) {
+    body {
+        background-color: white;
+        color: black;
+    }
+    
+    input {
+        background-color: lightgray;
+        color: black;
+    }
+    
+    button {
+        background-color: lightgray;
+        color: black;
+    }
+
+    button:hover {
+        background-color: #606060;
+    }
+    
+    a {
+        color: black;
+    }
+    
+    #records {
+        background-color: lightgray;
+    }
+    
+    h2 {
+        color: black;
+    }
+    
+    .addressBox {
+        background-color: white;
+        color: black;
+    }
+    
+    .address {
+        color: black;
+        background-color: lightgray;
+    }
+    
+    p {
+        color: black;
+    }
+    
+    .nftBox {
+        background-color: white;
+    }
+    
+    .copy {
+        content: url('images/copy-light.png');
+    }
+    
+    .opensea {
+        content: url('images/opensea-logo-light.png');
+    }
+    
+    .home {
+        content: url('images/home-light.png');
+    }
+    
+    .ipfs {
+        content: url('images/ipfs-logo-light.png');
+    }
+    
+    .email {
+        content: url('images/email-light.png');
+    }
+    
+    .redirect {
+        content: url('images/redirect-light.png');
+    }
+    
+    .missing {
+        content: url('images/missing-light.png');
+    }
+    
+    .menuItem {
+        background-color: lightgray;
+    }
+    
+    .active {
+        background-color: gray;
+        color: white;
+    }
+
+    .active:hover {
+        background-color: gray;
+    }
+    
+    .ownerSectionToggle {
+        content: url('images/expand-light.png');
+    }
+}
+
+@media screen and (max-device-width: 812px) {
+    body {
+        width: 95%;
+    }
+    
+    .ownerSection {
+        display: block;
+    }
+    
+    .ownerSection p {
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    
+    input {
+        margin-top: 30%;
+        width: 90%;
+        height: 65px;
+        border-radius: 15px;
+    }
+    
+    button {
+        width: 30%;
+        height: 30px;
+        border-radius: 5px;
+    }
+    
+    .addresses {
+        display: block;
+    }
+    
+    .addressBox {
+        border: none;
+        width: calc(90% - 20px);
+        margin: auto;
+        margin-bottom: 10px;
+    }
+    
+    .logo {
+        height: 75px;
+        width: 75px;
+        margin-top: 5px;
+    }
+    
+    .address {
+        font-size: 30px;
+        width: 100%;
+        height: 50px;
+        margin: 10px;
+        margin-bottom: 0px;
+    }
+    
+    .addressTable {
+        width: calc(95% - 75px);
+    }
+    
+    .copy {
+        height: 30px;
+        width: 30px;
+        margin-left: 15px;
+    }
+    
+    .home {
+        max-height: 40px;
+        max-width: 40px;
+    }
+    
+    #record {
+        margin-bottom: 20px;
+    }
+    
+    .container {
+        margin-top: 0%;
+    }
+    
+    table {
+        margin: 0;
+    }
+    
+    .tickerInfo img {
+        float: left;
+        border-right: solid gray 1px;
+        padding-right: 10px;
+    }
+    
+    .tickerInfo p {
+        display:flex;
+        padding-left: 15px;
+    }
+    
+    .tooltip .tooltiptext {
+        margin-left: -30px;
+    }
+    
+    .homeButton h2 {
+        font-size: 35px;
+    }
+
+	.banner {
+    	font-size: 45px;
+	}
+    
+    .nftBox {
+        height: 400px;
+        width: 90%;
+        border-radius: 10px;
+        margin: auto;
+        margin-bottom: 10px;
+    }
+
+    .nft {
+        max-height: 200px;
+        max-width: calc(100% - 20px);
+    }
+
+    .nftInfo {
+        height: 200px;
+    }
+    
+    .nftDescription p {
+        display: none;
+    }
+    
+    .creatorInfo {
+        font-size: 20px;
+        overflow: hidden;
+        width: 100%;
+        margin: auto;
+        margin-bottom: 5px;
+    }
+    
+    .creatorLink a {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+    
+    .creatorImg {
+        max-height: 5%;
+        max-width: 5%;
+        }
+    
+    .domainDiv {
+        display: grid;
+        grid-template-columns: auto auto;
+        justify-content: space-between;
+        width: 90%;
+        margin: auto;
+        padding-bottom: 10px;
+    }
+    
+    .domainDiv p {
+        position: relative;
+        margin: 0;
+    }
+    
+    #ownerSectionInfo {
+        display: none;
+        border-top: 1px solid gray;
+        border-bottom: 1px solid gray;
+    }
+    
+    .ownerSectionToggle {
+        display: block;
+        max-height: 25px;
+        max-width: 25px;
+        margin-top: 80%;
+    }
+    
+    .domain {
+        max-width: calc(100% - 25px);
+        text-align: left;
+    }
+    
+    .gallery {
+        grid-template-columns:  repeat(auto-fill, minmax(339px, 1fr));
+    }
+    
+    .modal-body {
+        grid-template-columns: auto;
+    }
+    
+    .modal-info {
+        border: none;
+    }
+}

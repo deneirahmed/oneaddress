@@ -617,6 +617,14 @@ footer {
     .ownerSectionToggle {
         content: url('images/expand-light.png');
     }
+
+    .modal-content {
+	background-color: white;
+    }
+
+    .close {
+        color: black;
+    }
 }
 
 @media screen and (max-device-width: 812px) {

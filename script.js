@@ -405,7 +405,7 @@ function showModal(index) {
     
     content.appendChild(nft);
     content.appendChild(nftInfo);
-    modal.style.display = "block";
+//     modal.style.display = "block";
 }
 
 function sleep(ms) {

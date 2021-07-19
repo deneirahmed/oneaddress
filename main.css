@@ -171,6 +171,10 @@ hr {
     vertical-align: middle;
 }
 
+.copyCell {
+    width: 20px;
+}
+
 .opensea {
     content: url('images/opensea-logo.png');
 }
@@ -687,6 +691,10 @@ footer {
         height: 30px;
         width: 30px;
         margin-left: 15px;
+    }
+    
+    .copyCell {
+        width: 30px;
     }
     
     .home {

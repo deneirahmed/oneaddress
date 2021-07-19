@@ -9,6 +9,7 @@ var showOwnerSectionInfo = false;
 var modal;
 var span;
 var nftResult;
+var enableNFTModal = true;
 
 
 //retreive domain name from query
@@ -26,9 +27,9 @@ function getAddress(ticker, address) {
     var tickerUppercase = ticker.toUpperCase();
     
     if(imageExists('images/' + ticker + '.png')) {
-        var returnValue = '<div class="tickerInfo"><img class="logo" src="./images/' + ticker + '.png"><p>' + coins[tickerUppercase] +'</p></div><table class="addressTable"><tr><td><input id="' + ticker + '" type="text" class="address" value="' + address + '" disabled></td><td><div class="tooltip"><img onClick="copyAddress(\'' + ticker + '\');" class="copy"><span id="' + ticker + 'ToolTip" class="tooltiptext">Copied</span></div></td></tr></table>';
+        var returnValue = '<div class="tickerInfo"><img class="logo" src="./images/' + ticker + '.png"><p>' + coins[tickerUppercase] +'</p></div><table class="addressTable"><tr><td><input id="' + ticker + '" type="text" class="address" value="' + address + '" disabled></td><td class="copyCell"><div class="tooltip"><img onClick="copyAddress(\'' + ticker + '\');" class="copy"><span id="' + ticker + 'ToolTip" class="tooltiptext">Copied</span></div></td></tr></table>';
     } else {
-        var returnValue = '<div class="tickerInfo"><img class="logo missing"><p>' + coins[tickerUppercase] +'</p></div><table class="addressTable"><tr><td><input id="' + ticker + '" type="text" class="address" value="' + address + '" disabled></td><td><div class="tooltip"><img onClick="copyAddress(\'' + ticker + '\');" class="copy"><span id="' + ticker + 'ToolTip" class="tooltiptext">Copied</span></div></td></tr></table>';
+        var returnValue = '<div class="tickerInfo"><img class="logo missing"><p>' + coins[tickerUppercase] +'</p></div><table class="addressTable"><tr><td><input id="' + ticker + '" type="text" class="address" value="' + address + '" disabled></td><td class="copyCell><div class="tooltip"><img onClick="copyAddress(\'' + ticker + '\');" class="copy"><span id="' + ticker + 'ToolTip" class="tooltiptext">Copied</span></div></td></tr></table>';
     }
     
     return returnValue;
@@ -405,7 +406,10 @@ function showModal(index) {
     
     content.appendChild(nft);
     content.appendChild(nftInfo);
-    modal.style.display = "block";
+    
+    if(enableNFTModal) {
+        modal.style.display = "block";
+    }
 }
 
 function sleep(ms) {

@@ -9,7 +9,7 @@ var showOwnerSectionInfo = false;
 var modal;
 var span;
 var nftResult;
-var enableNFTModal = true;
+var enableNFTModal = false;
 
 
 //retreive domain name from query

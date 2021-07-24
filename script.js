@@ -233,7 +233,7 @@ function processResult(result) {
     if(result.whois.email != null && result.whois.email != "") {
         links.appendChild(emailLink);
     }
-    if(result.meta.type == "ENS" || result.meta.type == "CNS") {
+    if(result.meta.type == "ENS" || result.meta.type == "UNS") {
         links.appendChild(openseaLink);
         ethAddress = result.meta.owner;
         mainContainer.appendChild(menu);

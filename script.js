@@ -88,7 +88,7 @@ function loadResults() {
         window.location.replace("./index.html");
     }
     var domain = getParameterByName("domain").toLowerCase();
-    if(domain.endsWith(".crypto") || domain.endsWith(".eth") || domain.endsWith(".zil")) {
+    if(domain.endsWith(".crypto") || domain.endsWith(".eth") || domain.endsWith(".zil") || domain.endsWith(".x")) {
         resolve();
     } else {
         alert("Unsupported domain.");

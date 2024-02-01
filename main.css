@@ -12,8 +12,8 @@ body {
 }
 
 header {
-    margin: auto;
-    width: 260px;
+	margin: auto;
+	width: fit-content;
 }
 
 a {

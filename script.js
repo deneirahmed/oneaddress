@@ -27,9 +27,9 @@ function getAddress(ticker, address) {
     var tickerUppercase = ticker.toUpperCase();
     
     if(imageExists('images/' + ticker + '.png')) {
-        var returnValue = '<div class="tickerInfo"><img class="logo" src="./images/' + ticker + '.png"><p>' + coins[tickerUppercase] +'</p></div><table class="addressTable"><tr><td><input id="' + ticker + '" type="text" class="address" value="' + address + '" disabled></td><td class="copyCell"><div class="tooltip"><img onClick="copyAddress(\'' + ticker + '\');" class="copy"><span id="' + ticker + 'ToolTip" class="tooltiptext">Copied</span></div></td></tr></table>';
+        var returnValue = '<div class="tickerInfo"><img class="logo" src="./images/' + ticker + '.png"><p>' + coins[tickerUppercase] +'</p></div><table class="addressTable"><tr><td><input id="' + ticker + '" type="text" class="address" value="' + address + '" disabled></td><td class="copyCell"><div class="tooltip"><img onClick="copyAddress(\'' + ticker + '\');" onmouseout="outFunc(\'' + ticker + '\')" class="copy"><span id="' + ticker + 'ToolTip" class="tooltiptext">Copy</span></div></td></tr></table>';
     } else {
-        var returnValue = '<div class="tickerInfo"><img class="logo missing"><p>' + coins[tickerUppercase] +'</p></div><table class="addressTable"><tr><td><input id="' + ticker + '" type="text" class="address" value="' + address + '" disabled></td><td class="copyCell><div class="tooltip"><img onClick="copyAddress(\'' + ticker + '\');" class="copy"><span id="' + ticker + 'ToolTip" class="tooltiptext">Copied</span></div></td></tr></table>';
+        var returnValue = '<div class="tickerInfo"><img class="logo missing"><p>' + coins[tickerUppercase] +'</p></div><table class="addressTable"><tr><td><input id="' + ticker + '" type="text" class="address" value="' + address + '" disabled></td><td class="copyCell><div class="tooltip"><img onClick="copyAddress(\'' + ticker + '\');" onmouseout="outFunc(\'' + ticker + '\')" class="copy"><span id="' + ticker + 'ToolTip" class="tooltiptext">Copy</span></div></td></tr></table>';
     }
     
     return returnValue;
@@ -98,13 +98,19 @@ function loadResults() {
 
 //copy text
 function copyAddress(id) {
-    var address = document.getElementById(id).select();
-    document.execCommand('copy');
+    var address = document.getElementById(id);
+    address.select();
+    address.setSelectionRange(0,99999);
+
+    navigator.clipboard.writeText(address.value);
     
     var tooltip = document.getElementById(id + "ToolTip");
-    tooltip.style.visibility = "visible";
-    
-    sleep(2000).then(() => { tooltip.style.visibility = "hidden"; });
+    tooltip.innerHTML = "Copied";
+}
+
+function outFunc(id) {
+    var tooltip = document.getElementById(id + "ToolTip");
+    tooltip.innerHTML = "Copy";
 }
 
 function resolve() {
